@@ -1,24 +1,99 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    .chat li {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #B3A9A9;
+        margin-right: 20px;
+    }
+
+        .chat li.left .chat-body {
+            margin-left: 0px;
+        }
+
+        .chat li.right .chat-body {
+            margin-right: 0px;
+        }
+
+
+        .chat li .chat-body p {
+            margin: 0;
+            color: #777777;
+        }
+
+    .panel .slidedown .glyphicon, .chat .glyphicon {
+        margin-right: 5px;
+    }
+
+.body-panel {
+    overflow-y: scroll;
+    height: 80vh;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
 }
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+#btn-chat {
+    margin-top: 10px;
+}
+
+.list-counter-square {
+    list-style: none;
+    counter-reset: list;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+    .list-counter-square > li {
+        position: relative;
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        margin-left: 1.75rem;
+        margin-bottom: .25rem;
+        padding-left: 1rem;
+        padding-right: .5rem;
+        color: #fff;
+        background: #7b1fa2;
+        white-space: nowrap;
+        border-radius: .25rem
+    }
+
+        .list-counter-square > li:last-child {
+            margin-bottom: 0;
+        }
+
+        .list-counter-square > li::before {
+            content: counter(list);
+            counter-increment: list;
+            position: absolute;
+            left: -2rem;
+            top: -.25rem;
+            bottom: -.25rem;
+            width: 2.5rem;
+            line-height: 2rem;
+            border-radius: 1.25rem;
+            border: .25rem solid #fff;
+            text-align: center;
+            color: #fff;
+            background: #7b1fa2;
+        }

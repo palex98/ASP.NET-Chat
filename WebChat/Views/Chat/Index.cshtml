@@ -1,0 +1,164 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SuperChat</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/mdb.min.css" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="row" style="width: 100%;">
+        <div class="container col-md-3" style="margin-right: 0px; border-right: 1px dashed black; border-left: 1px dashed black;">
+
+            <div id="nickname-field">
+                @using (Ajax.BeginForm("LogIn", new AjaxOptions { UpdateTargetId = "nickname-field",
+                    LoadingElementId = "loading", OnSuccess="OnLogIn" }))
+                {
+                    <div class="md-form">
+                        <i class="fa fa-user prefix"></i>
+                        <input type="text" id="inputIconEx2" class="form-control" name="nickname" required>
+                        <label for="inputIconEx2">Nickname</label>
+                        <input type="submit" class="btn btn-primary btn-rounded" value="Enter to chat">
+                    </div>
+                }
+                <mdb-spinner id="loading" style="display:none" spinnerColor="red"></mdb-spinner>
+            </div>
+
+
+            <div class="container">
+                <h1 class="h5 text-center my-4">Users in the chat:</h1>
+
+                <ol class="list-counter-square" style="margin: 0 auto;">
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Integer molestie lorem at massa</li>
+                    <li>Facilisis in pretium nisl aliquet</li>
+                    <li>Nulla volutpat aliquam velit</li>
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="container col-md-6" style="margin-left: 0px;">
+            <div class="panel panel-primary">
+                <div class="panel-body body-panel">
+                    <ul class="chat">
+                        <li class="left clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Jack Sparrow</strong>
+                                    <small class="text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago
+                                    </small>
+                                </div>
+                                <p>
+                                    Lorem ipsum
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Bhaumik Patel</strong>
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Bhaumik Patel</strong>
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Bhaumik Patel</strong>
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix">
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">Bhaumik Patel</strong>
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel-footer clearfix">
+                    <textarea class="form-control" rows="3" id="text-area" placeholder="Введите текст сообщения..." disabled>Для отправки сообщений введите ник и войдите в чат!</textarea>
+                    <button class="btn btn-warning btn-lg btn-block" id="sending-message" disabled>Send</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    @Scripts.Render("~/scripts/jquery-3.3.1.min.js")
+    <!-- Bootstrap tooltips -->
+    @Scripts.Render("~/scripts/popper.min.js")
+    <!-- Bootstrap core JavaScript -->
+    @Scripts.Render("~/scripts/bootstrap.min.js")
+    <!-- MDB core JavaScript -->
+    @Scripts.Render("~/js/mdb.min.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+    <script type="text/javascript">
+        function OnLogIn() {
+            document.getElementById("sending-message").disabled = false;
+            document.getElementById("text-area").disabled = false;
+            document.getElementById("text-area").value = "";
+
+        }
+        </script>
+</body >
+
+</html >
