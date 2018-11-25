@@ -1,0 +1,14 @@
+﻿<p>Это ник занят!</p>
+@using (Ajax.BeginForm("LogIn", new AjaxOptions
+{
+    UpdateTargetId = "nickname-field",
+    OnSuccess = "OnLogIn"
+}))
+{
+    <div class="md-form" style="border-bottom: 1px dashed gray;">
+        <i class="fa fa-user prefix"></i>
+        <input type="text" id="inputIconEx2" class="form-control" name="nickname" autocomplete="off" required>
+        <label for="inputIconEx2">Nickname</label>
+        <button type="submit" class="btn btn-primary btn-rounded">Войти в чат</button>
+    </div>
+}

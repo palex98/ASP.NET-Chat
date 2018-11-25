@@ -9,5 +9,6 @@ namespace WebChat.Models
     {
         public int Id { set; get; }
         public string Nickname { set; get; }
+        public DateTime LastActivity { set; get; }
     }
 }

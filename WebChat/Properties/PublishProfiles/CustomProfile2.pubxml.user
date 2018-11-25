@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUVq3gPytdUqhh26LywIHwgAAAAACAAAAAAAQZgAAAAEAACAAAAB9ue7RhI5X6rVvHDFLFvUX1vnRnb9WeN5X9zYzCJDGSwAAAAAOgAAAAAIAACAAAAATN+Tp2GHd0JLTnZM7ahg3gptm7cgVcVi2GhXRk0A3aSAAAAA5IR5bxCoqr1AIFWnkIRka1jJwW8YxLHiKL93qj+XGR0AAAABWTh5FF25EqXKcb7SAfLwniQuSRu8XwONtNtZg8mycOVR02vo9LiFh1BJnUKROrH6TcC8pKRpLMuZ2dUE3rMKJ</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp-eu.site4now.net/chat</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

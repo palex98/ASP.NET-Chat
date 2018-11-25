@@ -7,8 +7,8 @@ namespace WebChat.Models
 {
     public class Message
     {
-        int Id { set; get; }
-        string Text { set; get; }
-        DateTime Time { set; get; }
+        public string Author { set; get; }
+        public string Text { set; get; }
+        public string DateTime { set; get; }
     }
 }
